@@ -381,3 +381,137 @@ Okay, here's an ASCII representation of the Go board, based on the image you pro
 |   |   |   |   |   |   |   |   |   |   |   |   |
 +---+---+---+---+---+---+---+---+---+^C
 ```
+
+
+### Prompt 9
+
+```
+ollama run gemma3:4b_ex "Generate an ASCII representation of the board with the placement of the stones like in the image" ~/Downloads/gogame6.jpeg
+```
+
+```
+Added image '/Users/mkemp/Downloads/gogame6.jpeg'
+Okay, here's an ASCII representation of the Go board with the stones placed as shown in the image.  It's difficult to perfectly replicate the visual, but this aims to capture the key elements.
+
+
+   ------------------------------------
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . . . . . . .  |
+  |   . . . . . . . . . . .^C
+```
+
+### Prompt 10
+
+```
+ollama run gemma3:4b_ex "Generate an ASCII representation of the board with the placement of the stones like in the image. use a , for white stones and a space for black stones and a . for empty location, limit the output to 25 lines" ~/Downloads/gogame6.jpeg
+```
+
+```
+Added image '/Users/mkemp/Downloads/gogame6.jpeg'
+Okay, here's an ASCII representation of the Go board with the stones placed as in the image, limited to 25 lines:
+
+`
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+ . . . . . . . . . . . . . . . . . . . . . .
+`
+
+**Explanation:**
+
+*   The board is represented by a grid of 9x9 points.
+*   `.` represents an empty point.
+*   `o` represents a white stone.
+*   ` ` (space) represents a black stone.
+
+**Note:**  This is a simplified ASCII representation.  A true Go board would have more detailed markings and a more complex layout.  I've focused on accurately representing the stone placements as shown in
+the image.
+```
+
+### Prompt 11
+
+```
+ollama run gemma3:4b_ex "Generate an ASCII representation of the board with the placement of the stones like in the image. use a w for white stones and a b for black stones and a + for empty location, limit the grid to 19 rows" ~/Downloads/gogame6.jpeg
+```
+
+```
+Added image '/Users/mkemp/Downloads/gogame6.jpeg'
+`
+   +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+ 19 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+ 18 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+ 17 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+ 16 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+ 15 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+ 14 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+ 13 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+ 12 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+ 11 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+ 10 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+  9 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+  8 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+  7 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+  6 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+  5 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+  4 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+  3 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+  2 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+   1 | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + | + |
+     +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+`
+```
+
