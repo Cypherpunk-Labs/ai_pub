@@ -3,6 +3,8 @@
 In this example we attempt to use the Gemma3 models image recognition capabilities. 
 Using images of a game of go board we hope to use the model to score the game. 
 
+Gemma cant seem to count, or describe coordinates when fed images of a go board game in one shot.
+
 ## Test image used
 
 ![gogame6](https://github.com/user-attachments/assets/0a72a4ab-b68a-484c-b60e-6b1cce8317bb)
