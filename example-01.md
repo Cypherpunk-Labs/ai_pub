@@ -26,6 +26,17 @@ PARAMETER repeat_penalty 1.5
 
 ## Prompts
 
+### Prompt Error (16gb Ram, single task not always cutting it)
+
+```
+ollama run gemma3:4b_ex "Describe the image" ~/Downloads/gogame6.jpeg
+```
+```
+Added image '/Users/mkemp/Downloads/gogame6.jpeg'
+
+Error: model runner has unexpectedly stopped, this may be due to resource limitations or an internal error, check ollama server logs for details
+```
+
 ### Prompt 1
 
 ```
@@ -180,4 +191,193 @@ Do you want me to delve deeper into a specific aspect of Go scoring, such as:
 *   The Ko rule in more detail?
 *   How dead stones are determined?
 *   How handicap games are scored?
+```
+
+### Prompt 3
+
+```
+ollama run gemma3:4b_ex "Describe the image" ~/Downloads/gogame6.jpeg
+```
+
+```
+Added image '/Users/mkemp/Downloads/gogame6.jpeg'
+Here's a description of the image:
+
+**Overall:**
+
+The image shows a Go board (also known as Igo or Weiqi) set up for a game. It's a standard 19x19 grid, a common size for the game.
+
+**Pieces:**
+
+*   **Black Stones:** There are 5 black stones arranged in a small cluster on the left side of the board.
+*   **White Stones:** There are 5 white stones arranged in a cluster on the right side of the board.
+
+**Board:**
+
+*   The board is a light grey color.
+*   Black lines divide the board into 19 horizontal and 19 vertical lines, creating the 361 intersections where stones are placed.
+*   The board is set up for a game in progress.
+
+Let me know if you'd like me to analyze a specific aspect of the image, such as the stone placement or the potential strategies.
+```
+
+### Prompt 4 
+
+```
+ollama run gemma3:4b_ex "Score this game with komi of 0.5" ~/Downloads/gogame6.jpeg
+```
+
+```
+Added image '/Users/mkemp/Downloads/gogame6.jpeg'
+Okay, let's analyze this Go board position with a 0.5 komi.
+
+**Analysis**
+
+This is a very complex position. It's difficult to definitively say who is winning, but it appears to be a very close game.
+
+**Black's Position**
+
+*   Black has a strong position.
+*   Black has a good shape and is controlling the center.
+*   Black has a good chance of securing a large territory.
+
+**White's Position**
+
+*   White is struggling to make progress.
+*   White's stones are somewhat isolated.
+*   White needs to find a way to attack Black's position.
+
+**Conclusion**
+
+Based on this position, **Black is likely to win**. Black has a stronger overall position and is more likely to secure the territory.
+
+**Score:**
+
+*   **Black: 8.5 points**
+*   **White: 5 points**
+
+**Important Note:** Go is a game of immense complexity, and even a small difference in stone placement can dramatically change the outcome. This is just an estimate based on the current board state.
+
+Would you like me to explain any specific aspect of the position in more detail?
+```
+
+### Prompt 5
+
+```
+ollama run gemma3:4b_ex "Succintly score this game with komi of 0.5" ~/Downloads/gogame6.jpeg
+```
+
+```
+Added image '/Users/mkemp/Downloads/gogame6.jpeg'
+Here's the score of the Go game, with a komi of 0.5:
+
+**Black wins**
+
+**Score: 3-2**
+
+**Explanation:**
+
+*   Black has 3 stones on the board.
+*   White has 2 stones on the board.
+```
+
+### Prompt 6
+
+```
+ollama run gemma3:4b_ex "Count how many stones of each colour" ~/Downloads/gogame6.jpeg
+```
+
+```
+Added image '/Users/mkemp/Downloads/gogame6.jpeg'
+Here's the count of stones on the Go board:
+
+*   **Black:** 6 stones
+*   **White:** 5 stones
+```
+
+### Prompt 7
+
+```
+ollama run gemma3:4b_ex "Count how many stones of each colour, and then score the game" ~/Downloads/gogame6.jpeg
+```
+
+```
+Added image '/Users/mkemp/Downloads/gogame6.jpeg'
+Okay, let's analyze the Go board and determine the scores.
+
+**Stone Count:**
+
+*   **Black:** 8 stones
+*   **White:** 5 stones
+
+**Scoring:**
+
+In Go, the player with the most territory at the end of the game wins.  Territory is counted as empty intersections surrounded by a player's stones.
+
+In this case, Black has more stones and therefore more territory.
+
+**Score:**
+
+*   **Black:** 1 point
+*   **White:** 0 points
+
+**Therefore, Black wins by 1 point.**
+
+Let me know if you'd like to analyze another Go board!
+```
+
+### Prompt 8
+
+```
+ollama run gemma3:4b_ex "Generate an ASCII representation of the board" ~/Downloads/gogame6.jpeg
+```
+
+```
+Added image '/Users/mkemp/Downloads/gogame6.jpeg'
+Okay, here's an ASCII representation of the Go board, based on the image you provided.  It's a simplified representation, focusing on the grid and the stone placements.
+
+
+  +---+---+---+---+---+---+---+---+---+---+---+---+
+  |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+^C
 ```
