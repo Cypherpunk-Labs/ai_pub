@@ -7,6 +7,10 @@ Gemma cant seem to score the game correctly in one shot.
 
 Gemma cant seem to count, or describe coordinates when fed images of a go board game in one shot.
 
+https://developers.googleblog.com/en/gemma-explained-whats-new-in-gemma-3/
+
+It has been suggested to use YOLO Architecture
+
 ## Test image used
 
 ![gogame6](https://github.com/user-attachments/assets/0a72a4ab-b68a-484c-b60e-6b1cce8317bb)
